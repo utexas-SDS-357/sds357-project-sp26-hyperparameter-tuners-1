@@ -1,0 +1,10 @@
+Modeling pipeline complete.
+Train years: [2013, 2014, 2015]
+Test years: [2016]
+Spline on age used: True
+Spline on wealth used: False
+Held-out accuracy: 0.7893
+Held-out macro F1: 0.2941
+Held-out balanced accuracy: 0.3333
+Held-out log loss: 0.5668
+Majority-class baseline accuracy: 0.7893

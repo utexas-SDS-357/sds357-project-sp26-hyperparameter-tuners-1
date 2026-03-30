@@ -1,0 +1,19 @@
+,0,1
+Intercept,-7.142551710083037,-1.1340871256681015
+C(subject_race_encd)[Black],-0.13371348821762927,9.406794481667694
+C(subject_race_encd)[Hispanic],16.042594579944286,9.146626476920746
+C(subject_race_encd)[Asian/Pacific Islander],-2.393671592708603,-1.5190037385738766
+C(subject_race_encd)[Unknown],3.3350643870595302,-2.329378305903738
+C(subject_race_encd)[Other],-0.5543740940127216,0.05539360902971194
+C(subject_sex_encd)[Female],-6.140563449549485,-12.538000645764722
+wealth_c,-1.8268832213488837,-0.7392923775042624
+wealth_c:C(subject_race_encd)[Black],2.5313734392176395,0.5252337009471516
+wealth_c:C(subject_race_encd)[Hispanic],0.01903139642409414,-1.3023694451989387
+wealth_c:C(subject_race_encd)[Asian/Pacific Islander],-0.5756071407439883,-0.5008070558498537
+wealth_c:C(subject_race_encd)[Unknown],1.9732091152756346,1.790948913752696
+wealth_c:C(subject_race_encd)[Other],0.6875072375291726,2.3785021486791256
+wealth_c:C(subject_sex_encd)[Female],0.5611427317189102,-1.0376554759016725
+"bs(age_c, df=4, include_intercept=False)[0]",1.1667450953724037,-5.461627438521858
+"bs(age_c, df=4, include_intercept=False)[1]",-0.6355367864074788,-6.024519813125503
+"bs(age_c, df=4, include_intercept=False)[2]",-0.33314707279205175,-5.195267512129705
+"bs(age_c, df=4, include_intercept=False)[3]",-5.703021064921998,-3.339442069720262
