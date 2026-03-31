@@ -55,7 +55,7 @@ sds357-project-sp26-hyperparameter-tuners-1/
 ├── data/                        ← Raw source data (see Datasets section for downloads)
 │
 ├── df_housing_clean.csv         ← Cleaned Nashville Housing dataset with geocoded coordinates
-├── df_main_clean.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
+├── main_df_final.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
 │
 ├── housing_cleaning.ipynb       ← Data cleaning of the Nashville housing dataset
 ├── main_cleaning.ipynb          ← Data cleaning of the SOPP dataset
@@ -64,7 +64,7 @@ sds357-project-sp26-hyperparameter-tuners-1/
 └── modeling.ipynb               ← MLR model estimation, assumption checks, and results
 ```
 
-> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) are included so you can run `eda.ipynb` and `modeling.ipynb` directly without rerunning the full pipeline. However, the data cleaning notebooks (`housing_cleaning.ipynb` and `main_cleaning.ipynb`) are included for transparency and reproducibility.
+> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `main_df_final.csv.zip`) are included so you can run `eda.ipynb` and `modeling.ipynb` directly without rerunning the full pipeline. However, the data cleaning notebooks (`housing_cleaning.ipynb` and `main_cleaning.ipynb`) are included for transparency and reproducibility.
 
 ---
 
@@ -146,7 +146,7 @@ Follow the instructions in [Datasets → Dataset 1](#1-stanford-open-policing-pr
 
 Pipeline overview: Data Cleaning → Data Wrangling → EDA → Modeling
 
-The included notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `df_main_clean.csv.zip`), you can skip steps 1-2 and begin with Step 3.
+The included notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `main_df_final.csv.zip`), you can skip steps 1-2 and begin with Step 3.
 
 ### Step 1 - Data Cleaning
 
@@ -182,7 +182,7 @@ This notebook:
 - Encodes categorical variables (race, sex) into numeric format
 - Geocodes Nashville housing addresses via the OpenStreetMap Nominatim API (see ⚠️ below)
 - Constructs the wealth index as the median sale price within a 1-mile radius of each traffic stop
-- Merges the wealth index into the policing dataset and outputs `df_main_clean.csv`
+- Merges the wealth index into the policing dataset and outputs `main_df_final.csv.zip`
 
 > ⚠️ **Geocoding note:** Converting ~24,000 addresses takes significant time due to Nominatim API rate limits. The output `df_housing_clean.csv` is already included in the repo — you can skip this step entirely.
 
@@ -202,7 +202,7 @@ This notebook generates the following figures from the midterm report:
 - **Figure 3** — Spatial map of log-scaled median housing prices across Nashville
 - **Figure 4** — Boxplots of wealth index by stop outcome
 
-**Input:** `df_main_clean.csv.zip` (already in repo)
+**Input:** `main_df_final.csv.zip` (already in repo)
 
 ---
 
@@ -224,7 +224,7 @@ This notebook:
 - Generates predicted probability plots by wealth index, race, sex, and age (Figures 9–11)
 - Validates on 2016 test set using `scikit-learn`
 
-**Input:** `df_main_clean.csv.zip` (already in repo)
+**Input:** `main_df_final.csv.zip` (already in repo)
 
 ---
 
