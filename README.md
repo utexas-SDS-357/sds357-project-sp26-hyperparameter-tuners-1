@@ -37,11 +37,11 @@ Our primary statistical model is a **Multinomial Logistic Regression (MLR)**, ch
 
 | Name | EID | GitHub |
 |------|-----|--------|
-| Viren Halaharivi | vsh353 | [<!-- REPLACE: @GitHubUsername -->](https://github.com/<!-- REPLACE -->) |
-| John Reynoldson | jsr3598 | [<!-- REPLACE: @GitHubUsername -->](https://github.com/<!-- REPLACE -->) |
-| Vidhi Sapru | vs26487 | [<!-- REPLACE: @GitHubUsername -->](https://github.com/<!-- REPLACE -->) |
-| Rachel Nguyen | rtn398 | [<!-- REPLACE: @GitHubUsername -->](https://github.com/<!-- REPLACE -->) |
-| Caroline Langenkamp | cl48358 | [<!-- REPLACE: @GitHubUsername -->](https://github.com/<!-- REPLACE -->) |
+| Viren Halaharivi | vsh353 | [vhalarivi26](https://github.com/vhalaharivi26) |
+| John Reynoldson | jsr3598 | [jreynoldson21](https://github.com/jreynoldson21) |
+| Vidhi Sapru | vs26487 | [vidhisapru](https://github.com/vidhisapru) |
+| Rachel Nguyen | rtn398 | [racheltnguyen07](https://github.com/racheltnguyen07) |
+| Caroline Langenkamp | cl48358 | [carolinelangenkamp](https://github.com/carolinelangenkamp) |
 
 ---
 
