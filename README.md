@@ -57,12 +57,14 @@ sds357-project-sp26-hyperparameter-tuners-1/
 ├── df_housing_clean.csv         ← Cleaned Nashville Housing dataset with geocoded coordinates
 ├── df_main_clean.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
 │
-├── wrangling.ipynb              ← Data cleaning, geocoding, and wealth index construction
+├── housing_cleaning.ipynb       ← Data cleaning of the Nashville housing dataset
+├── main_cleaning.ipynb          ← Data cleaning of the SOPP dataset
+├── wrangling.ipynb              ← Data wrangling, geocoding, and wealth index construction
 ├── eda.ipynb                    ← Exploratory data analysis and figures
 └── modeling.ipynb               ← MLR model estimation, assumption checks, and results
 ```
 
-> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) are included so you can run `eda.ipynb` and `modeling.ipynb` directly without rerunning the full pipeline.
+> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) are included so you can run `eda.ipynb` and `modeling.ipynb` directly without rerunning the full pipeline. However, the data cleaning notebooks (`housing_cleaning.ipynb` and `main_cleaning.ipynb`) are included for transparency and reproducibility.
 
 ---
 
@@ -142,9 +144,33 @@ Follow the instructions in [Datasets → Dataset 1](#1-stanford-open-policing-pr
 
 ## Reproducing the Analysis
 
-The three notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `df_main_clean.csv.zip`), you can skip to Step 2.
+Pipeline overview: Data Cleaning → Data Wrangling → EDA → Modeling
 
-### Step 1 — Data wrangling, geocoding, and wealth index construction
+The included notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `df_main_clean.csv.zip`), you can skip steps 1-2 and begin with Step 3.
+
+### Step 1 - Data Cleaning
+
+**Notebooks:** [`housing_cleaning.ipynb`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/housing_cleaning.ipynb)
+[`main_cleaning.ipynb`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/main_cleaning.ipynb)
+
+```bash
+jupyter notebook housing_cleaning.ipynb
+jupyter notebook main_cleaning.ipynb
+```
+
+These notebooks:
+- Drops unnecessary columns of the Nashville housing dataset
+- Rounds latitude and longitude values to six decimals in the Nashville housing dataset
+- Removes NA values from key variable columns of the Nashville housing dataset
+- Filters the raw SOPP dataset to 2013–2016 and drops rows with missing key variables
+- Drops unnecessary columns of the raw SOPP dataset
+- Rounds latitude and longitude values to six decimals in the raw SOPP dataset
+- Changes datatypes of certain columns of the raw SOPP dataset so it is ready for analysis
+- Encodes categorical variable of outcome into numeric format
+
+---
+
+### Step 2 — Data Wrangling, Geocoding, and Wealth Index Construction
 
 **Notebook:** [`wrangling.ipynb`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/wrangling.ipynb)
 
@@ -153,18 +179,16 @@ jupyter notebook wrangling.ipynb
 ```
 
 This notebook:
-- Filters the raw SOPP dataset to 2013–2016 and drops rows with missing key variables
-- Standardizes latitude/longitude to 6 decimal places
-- Encodes categorical variables (race, sex, outcome) into numeric format
-- Geocodes Nashville housing addresses via the OpenStreetMap Nominatim API
+- Encodes categorical variables (race, sex) into numeric format
+- Geocodes Nashville housing addresses via the OpenStreetMap Nominatim API (see ⚠️ below)
 - Constructs the wealth index as the median sale price within a 1-mile radius of each traffic stop
-- Merges the wealth index into the policing dataset and outputs `df_main_clean_with_wealth_index.csv`
+- Merges the wealth index into the policing dataset and outputs `df_main_clean.csv`
 
 > ⚠️ **Geocoding note:** Converting ~24,000 addresses takes significant time due to Nominatim API rate limits. The output `df_housing_clean.csv` is already included in the repo — you can skip this step entirely.
 
 ---
 
-### Step 2 — Exploratory data analysis
+### Step 3 — Exploratory Data Analysis
 
 **Notebook:** [`eda.ipynb`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/eda.ipynb)
 
@@ -182,7 +206,7 @@ This notebook generates the following figures from the midterm report:
 
 ---
 
-### Step 3 — Model estimation and results
+### Step 4 — Model Estimation and Results
 
 **Notebook:** [`modeling.ipynb`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/modeling.ipynb)
 
