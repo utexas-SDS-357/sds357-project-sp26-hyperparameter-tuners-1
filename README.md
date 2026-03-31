@@ -29,7 +29,7 @@ This project uses the [Stanford Open Policing Project (SOPP)](https://openpolici
 
 Our primary statistical model is a **Multinomial Logistic Regression (MLR)**, chosen for its interpretability and suitability for nominal categorical outcomes. The analysis is inferential in nature: rather than optimizing predictive accuracy, we aim to estimate and interpret the direction and magnitude of associations between neighborhood wealth, demographic characteristics, and stop outcomes.
 
-**Midterm Report:** [📄 View the Midterm Report](<!-- REPLACE: paste a direct link to your midterm report PDF, e.g. a Google Drive share link or a link to the file in your repo once uploaded -->)
+**Midterm Report:** [📄 View the Midterm Report](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/blob/main/SDS357_Midterm_Report.pdf)
 
 ---
 
