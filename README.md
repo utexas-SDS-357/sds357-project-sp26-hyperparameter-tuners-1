@@ -158,7 +158,7 @@ This notebook:
 - Encodes categorical variables (race, sex, outcome) into numeric format
 - Geocodes Nashville housing addresses via the OpenStreetMap Nominatim API
 - Constructs the wealth index as the median sale price within a 1-mile radius of each traffic stop
-- Merges the wealth index into the policing dataset and outputs `df_main_clean.csv`
+- Merges the wealth index into the policing dataset and outputs `df_main_clean_with_wealth_index.csv`
 
 > ⚠️ **Geocoding note:** Converting ~24,000 addresses takes significant time due to Nominatim API rate limits. The output `df_housing_clean.csv` is already included in the repo — you can skip this step entirely.
 
