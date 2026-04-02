@@ -44,9 +44,9 @@ Our primary statistical model is a **Multinomial Logistic Regression (MLR)**, ch
 ---
 
 ## Repository Structure
-This repository structure uses a branch-based workflow, meaning each branch contains notebooks and files for a specific stage of the pipeline.
 
-```
+This repository uses a **branch-based workflow** — each branch contains the notebooks and files for a specific stage of the pipeline. The `main` branch holds the README and final merged outputs only.
+
 | Branch | Contents |
 |--------|----------|
 | [`main`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/main) | README, final processed datasets |
@@ -64,7 +64,6 @@ sds357-project-sp26-hyperparameter-tuners-1/
 ├── df_housing_clean.csv         ← Cleaned Nashville Housing dataset with geocoded coordinates
 └── df_main_clean.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
 ```
-
 
 > **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) on `main` are the final versions — you can run EDA and modeling notebooks directly without rerunning the full pipeline.
 
