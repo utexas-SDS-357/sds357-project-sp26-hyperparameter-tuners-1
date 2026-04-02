@@ -44,25 +44,29 @@ Our primary statistical model is a **Multinomial Logistic Regression (MLR)**, ch
 ---
 
 ## Repository Structure
+This repository structure uses a branch-based workflow, meaning each branch contains notebooks and files for a specific stage of the pipeline.
 
+```
+| Branch | Contents |
+|--------|----------|
+| [`main`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/main) | README, final processed datasets |
+| [`datasets`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/datasets) | Raw and processed data files |
+| [`geocoding`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/geocoding) | Address geocoding pipeline via OpenStreetMap Nominatim API |
+| [`cleaning-and-wrangling`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/cleaning-and-wrangling) | Data cleaning, encoding, and wealth index construction |
+| [`EDA-and-modeling`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/EDA-and-modeling) | Exploratory data analysis, model estimation, and results |
+| [`feedback`](https://github.com/utexas-SDS-357/sds357-project-sp26-hyperparameter-tuners-1/tree/feedback) | Instructor and peer feedback |
+
+**Files on `main`:**
 ```
 sds357-project-sp26-hyperparameter-tuners-1/
 │
 ├── README.md                    ← You are here
-│
-├── data/                        ← Raw source data (see Datasets section for downloads)
-│
 ├── df_housing_clean.csv         ← Cleaned Nashville Housing dataset with geocoded coordinates
-├── df_main_clean.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
-│
-├── housing_cleaning.ipynb       ← Data cleaning of the Nashville housing dataset
-├── main_cleaning.ipynb          ← Data cleaning of the SOPP dataset
-├── wrangling.ipynb              ← Data wrangling, geocoding, and wealth index construction
-├── eda.ipynb                    ← Exploratory data analysis and figures
-└── modeling.ipynb               ← MLR model estimation, assumption checks, and results
+└── df_main_clean.csv.zip        ← Final merged, model-ready dataset (~1.3M traffic stop rows)
 ```
 
-> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) are included so you can run `eda.ipynb` and `modeling.ipynb` directly without rerunning the full pipeline. However, the data cleaning notebooks (`housing_cleaning.ipynb` and `main_cleaning.ipynb`) are included for transparency and reproducibility.
+
+> **Note:** The raw SOPP traffic stop data is not committed to this repository due to file size. See the [Datasets](#datasets) section for download instructions. The processed outputs (`df_housing_clean.csv` and `df_main_clean.csv.zip`) on `main` are the final versions — you can run EDA and modeling notebooks directly without rerunning the full pipeline.
 
 ---
 
