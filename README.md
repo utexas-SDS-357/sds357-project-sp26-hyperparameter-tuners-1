@@ -180,7 +180,7 @@ This notebook:
 - Encodes categorical variables (race, sex) into numeric format
 - Geocodes Nashville housing addresses via the OpenStreetMap Nominatim API (see ⚠️ below)
 - Constructs the wealth index as the median sale price within a 1-mile radius of each traffic stop
-- Merges the wealth index into the policing dataset and outputs `df_main_clean.csv`
+- Merges the wealth index into the policing dataset and outputs `main_df_final_with_wealth_past_only.csv`
 
 > ⚠️ **Geocoding note:** Converting ~24,000 addresses takes significant time due to Nominatim API rate limits. The output `df_housing_clean.csv` is already included in the repo — you can skip this step entirely.
 
@@ -200,7 +200,7 @@ This notebook generates the following figures from the midterm report:
 - **Figure 3** — Spatial map of log-scaled median housing prices across Nashville
 - **Figure 4** — Boxplots of wealth index by stop outcome
 
-**Input:** `df_main_clean.csv.zip` (already in repo)
+**Input:** `main_df_final_with_wealth_past_only.csv` 
 
 ---
 
@@ -222,7 +222,7 @@ This notebook:
 - Generates predicted probability plots by wealth index, race, sex, and age (Figures 9–11)
 - Validates on 2016 test set using `scikit-learn`
 
-**Input:** `df_main_clean.csv.zip` (already in repo)
+**Input:** `main_df_final_with_wealth_past_only.csv` 
 
 ---
 
