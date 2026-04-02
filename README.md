@@ -144,7 +144,7 @@ Follow the instructions in [Datasets → Dataset 1](#1-stanford-open-policing-pr
 
 Pipeline overview: Data Cleaning → Data Wrangling → EDA → Modeling
 
-The included notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `df_main_clean.csv.zip`), you can skip steps 1-2 and begin with Step 3.
+The included notebooks should be run in the following order. If you are starting from the pre-processed files already in the repo (`df_housing_clean.csv` and `main_df_final.csv.zip`), you can skip steps 1-2 and begin with Step 3.
 
 ### Step 1 - Data Cleaning
 
