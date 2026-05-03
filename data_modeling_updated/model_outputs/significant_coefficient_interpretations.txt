@@ -1,0 +1,30 @@
+Significant coefficient interpretation summary
+Only terms with cluster-robust p-values below 0.05 are interpreted below.
+Odds ratios are relative to Warning, the model reference outcome.
+Race comparisons use White as the reference category and sex comparisons use Male as the reference category.
+
+Citation vs Warning
+- For Citation vs Warning, term `Intercept` is statistically significant with OR = 0.237 and p < 0.001. Interpret this term cautiously in the context of the full multinomial specification.
+- For Citation vs Warning, Hispanic drivers have 101.9% higher odds of that outcome rather than Warning compared with White drivers at the reference levels of the continuous predictors (OR = 2.019, p < 0.001).
+- For Citation vs Warning, Asian/Pacific Islander drivers have 22.3% lower odds of that outcome rather than Warning compared with White drivers at the reference levels of the continuous predictors (OR = 0.777, p < 0.001).
+- For Citation vs Warning, female drivers have 10.4% lower odds of that outcome rather than Warning compared with male drivers at the reference levels of the continuous predictors (OR = 0.896, p < 0.001).
+
+Arrest vs Warning
+- For Arrest vs Warning, term `Intercept` is statistically significant with OR = 0.353 and p < 0.001. Interpret this term cautiously in the context of the full multinomial specification.
+- For Arrest vs Warning, Black drivers have 117.6% higher odds of that outcome rather than Warning compared with White drivers at the reference levels of the continuous predictors (OR = 2.176, p < 0.001).
+- For Arrest vs Warning, Hispanic drivers have 176.4% higher odds of that outcome rather than Warning compared with White drivers at the reference levels of the continuous predictors (OR = 2.764, p < 0.001).
+- For Arrest vs Warning, Asian/Pacific Islander drivers have 38.6% lower odds of that outcome rather than Warning compared with White drivers at the reference levels of the continuous predictors (OR = 0.614, p < 0.001).
+- For Arrest vs Warning, female drivers have 51.5% lower odds of that outcome rather than Warning compared with male drivers at the reference levels of the continuous predictors (OR = 0.485, p < 0.001).
+- For Arrest vs Warning, a one-unit increase in centered logged neighborhood wealth is associated with 28.6% lower odds of that outcome rather than Warning (OR = 0.714, p < 0.001). Because WealthIndex is already logged, this is a shift on the log-wealth scale, not a one-dollar increase.
+- For Arrest vs Warning, the wealth interaction for Black is statistically significant (p < 0.001). The odds ratio of 1.367 implies that the wealth association is stronger for this subgroup than for the corresponding reference group. This is an interaction contrast, not a standalone main effect.
+- For Arrest vs Warning, the wealth interaction for Hispanic is statistically significant (p < 0.001). The odds ratio of 1.350 implies that the wealth association is stronger for this subgroup than for the corresponding reference group. This is an interaction contrast, not a standalone main effect.
+
+Spline note
+- Spline basis coefficients are intentionally not translated into standalone odds-ratio sentences because individual basis terms are not substantively interpretable on their own.
+- Use the predicted-probability figures to describe nonlinear wealth or age patterns when spline terms are present.
+
+Derived wealth effects for subgroups with significant wealth interactions
+- These are linear-combination tests of the subgroup-specific wealth slope, not just the interaction term alone.
+- A non-significant main `wealth_c` coefficient does not prevent a subgroup-specific wealth effect from being statistically significant.
+
+No subgroup-specific wealth contrasts met the significance threshold after combining the main wealth effect with the interaction term.

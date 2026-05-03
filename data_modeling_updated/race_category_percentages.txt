@@ -1,0 +1,14 @@
+Race category percentages in `main_df_final_with_wealth_past_only.csv`
+
+Total rows scanned: 1,362,893
+Rows with exactly one active race dummy: 1,361,622
+Rows excluded from percentage calculation due to invalid/multiple/missing race encoding: 1,271
+
+Percentages below use the valid-race denominator of 1,361,622 rows:
+
+White: 732,538 rows (53.7989%)
+Black: 517,854 rows (38.0321%)
+Hispanic: 73,261 rows (5.3804%)
+Asian/Pacific Islander: 18,914 rows (1.3891%)
+Unknown: 17,522 rows (1.2868%)
+Other: 1,533 rows (0.1126%)

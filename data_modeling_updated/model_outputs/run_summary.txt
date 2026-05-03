@@ -1,0 +1,12 @@
+Modeling pipeline complete.
+Inferential target: association of neighborhood wealth with stop outcome, not out-of-sample prediction.
+No train/test split or cross-validation used because the primary goal is coefficient estimation and interpretation on the full analytic sample.
+Analytic sample rows used in model: 1314957
+Years included in model fit: {2013: 384965, 2014: 358496, 2015: 310385, 2016: 261111}
+Spline on age used: True
+Spline on wealth used: False
+Wealth x age interaction omitted from the default specification because age is modeled flexibly and that interaction is not cleanly interpretable inferentially.
+Race categories excluded from model: Unknown, Other
+WealthIndex verified against wrangling.py as log(median nearby sale price within 1 mile), built using stop-year-or-earlier sales only.
+Significant odds-ratio interpretations written to: data_modeling_updated/model_outputs/significant_coefficient_interpretations.txt
+Count of significant interpretable terms summarized: 12
