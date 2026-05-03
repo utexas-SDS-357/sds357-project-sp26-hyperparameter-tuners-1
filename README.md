@@ -37,7 +37,6 @@ Full model estimation pipeline. Includes:
 - Final MLR with wealth × race and wealth × sex interaction terms
 - Age modeled with natural cubic spline (df=4)
 - Cluster-robust standard errors (clustered by year × geographic grid cell)
-- Temporal train/test split: 2013–2015 train, 2016 test
 - Predicted probability plots by wealth, race, sex, and age (Figures 9–11)
 
 ### `data/model_outputs/`
